@@ -37,6 +37,18 @@ else
   echo "secret does not match"
 fi
 
+if [ "$LOCATION" == "westeurope" ]; then
+  echo "that's the loc one!"
+else
+  echo "secret does lovc not match"
+fi
+
+if [ "$WORKSPACE_NAME" == "test" ]; then
+  echo "that's the test one!"
+else
+  echo "secret does test not match"
+fi
+
 # If RESOURCE_GROUP_NAME is empty, the az configure is pending.
 RESOURCE_GROUP_NAME=${RESOURCE_GROUP_NAME:-}
 if [[ -z "$RESOURCE_GROUP_NAME" ]]
