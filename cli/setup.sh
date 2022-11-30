@@ -26,8 +26,8 @@ az extension add -n ml -y
 
 ## For backward compatibility - running on old subscription
 # <set_variables>
-GROUP=$RESOURCE_GROUP_NAME
-LOCATION=$RESOURCE_LOCATION
+GROUP=$RG_NAME
+LOCATION=$LOCATION
 WORKSPACE=$WORKSPACE_NAME
 # </set_variables>
 

@@ -21,8 +21,8 @@ There are multiple ways for Github runner to authenticate so that it can run act
    - TENANT_ID : your tenant ID
    - SUBSCRIPTION_ID : your subscription ID
 - Define the following secrets in Github that are going to be use by the setup.sh script: 
-   - RESOURCE_GROUP_NAME
-   - RESOURCE_LOCATION
+   - RG_NAME
+   - LOCATION
    - WORKSPACE_NAME
 - Run the workflow trough Github UI.
 
