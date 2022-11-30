@@ -4,6 +4,10 @@ permissions:
   contents: read
 on:
   workflow_dispatch:
+env: 
+  RESOURCE_GROUP_NAME: ${{secrets.RESOURCE_GROUP_NAME}}
+  RESOURCE_LOCATION: ${{secrets.RESOURCE_LOCATION}}
+  WORKSPACE_NAME: ${{secrets.WORKSPACE_NAME}}
 jobs:
   build:
     runs-on: ubuntu-latest
