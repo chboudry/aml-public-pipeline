@@ -14,6 +14,8 @@ There are multiple ways for Github runner to authenticate so that it can run act
 
 ## Prerequisites
 
+- Have a public AML workspace running in Azure
+- have a compute cluster available called "cpu-cluster" (or change the pipeline.yml to match the name of your cluster)
 - [Create an app registration within Azure AD with OpenID Connect](https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-portal%2Cwindows#use-the-azure-login-action-with-openid-connect)
 - On the resource group the ML workspace is, provide RBAC contributor permission to the app registration (you can reduce permissions depending on your use case)
 - Define the following secrets in Github that are going to be use by the Github pipeline to authenticate: 
