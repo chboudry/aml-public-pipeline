@@ -5,8 +5,8 @@ permissions:
 on:
   workflow_dispatch:
 env: 
-  RESOURCE_GROUP_NAME: ${{secrets.RESOURCE_GROUP_NAME}}
-  RESOURCE_LOCATION: ${{secrets.RESOURCE_LOCATION}}
+  RG_NAME: ${{secrets.RG_NAME}}
+  LOCATION: ${{secrets.LOCATION}}
   WORKSPACE_NAME: ${{secrets.WORKSPACE_NAME}}
 jobs:
   build:
