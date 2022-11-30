@@ -14,17 +14,17 @@ There are multiple ways for Github runner to authenticate so that it can run act
 
 ## Prerequisites
 
-- Have a public AML workspace running in Azure
-- have a compute cluster available called "cpu-cluster" (or change the pipeline.yml to match the name of your cluster)
-- [Create an app registration within Azure AD with OpenID Connect](https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-portal%2Cwindows#use-the-azure-login-action-with-openid-connect)
-- On the resource group the ML workspace is, provide RBAC contributor permission to the app registration (you can reduce permissions depending on your use case)
-- Define the following secrets in Github that are going to be use by the Github pipeline to authenticate: 
+1. Have a public AML workspace running in Azure
+1. have a compute cluster available called "cpu-cluster" (or change the pipeline.yml to match the name of your cluster)
+1. [Create an app registration within Azure AD with OpenID Connect](https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-portal%2Cwindows#use-the-azure-login-action-with-openid-connect)
+1. On the resource group the ML workspace is, provide RBAC contributor permission to the app registration (you can reduce permissions depending on your use case)
+1. Define the following secrets in Github that are going to be use by the Github pipeline to authenticate: 
    - CLIENT_ID : the app registration client ID
    - TENANT_ID : your tenant ID
    - SUBSCRIPTION_ID : your subscription ID
-- Define the following secrets in Github that are going to be use by the setup.sh script: 
+1. Define the following secrets in Github that are going to be use by the setup.sh script: 
    - RG_NAME
    - LOCATION
    - WORKSPACE_NAME
-- Run the workflow trough Github UI.
+1. Run the workflow trough Github UI.
 
