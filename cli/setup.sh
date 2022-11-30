@@ -31,7 +31,7 @@ LOCATION="$LOCATION"
 WORKSPACE="$WORKSPACE_NAME"
 # </set_variables>
 
-if [ "$RG_NAME" == "onlineml" ]; then
+if [ "$RG_NAME" == "onlineaml" ]; then
   echo "that's the one!"
 else
   echo "secret does not match"
