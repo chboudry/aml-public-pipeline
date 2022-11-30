@@ -31,6 +31,12 @@ LOCATION="$LOCATION"
 WORKSPACE="$WORKSPACE_NAME"
 # </set_variables>
 
+if [ "$RG_NAME" == "onlineml" ]; then
+  echo "that's the one!"
+else
+  echo "secret does not match"
+fi
+
 # If RESOURCE_GROUP_NAME is empty, the az configure is pending.
 RESOURCE_GROUP_NAME=${RESOURCE_GROUP_NAME:-}
 if [[ -z "$RESOURCE_GROUP_NAME" ]]
