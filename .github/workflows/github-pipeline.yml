@@ -4,10 +4,6 @@ permissions:
   contents: read
 on:
   workflow_dispatch:
-env: 
-  RG_NAME: ${{secrets.RG_NAME}}
-  LOCATION: ${{secrets.LOCATION}}
-  WORKSPACE_NAME: ${{secrets.WORKSPACE_NAME}}
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,7 +17,7 @@ jobs:
         tenant-id: ${{secrets.TENANT_ID}}
         subscription-id: ${{secrets.SUBSCRIPTION_ID}}
     - name: setup
-      run: bash setup.sh
+      run: RG_NAME=${{secrets.RG_NAME}} LOCATION=${{secrets.LOCATION}} WORKSPACE_NAME=${{secrets.WORKSPACE_NAME}} ./setup.sh
       working-directory: cli
       continue-on-error: true
     - name: run job
