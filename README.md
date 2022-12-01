@@ -12,7 +12,7 @@ There are multiple ways for Github runner to authenticate so that it can run act
 - [Create a service principal](https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-portal%2Cwindows#use-the-azure-login-action-with-a-service-principal-secret) and provide the credentials as part of Github secret, it is the easiest way,but as a secret is used, it implies key rotation which is not ideal.
 - Use an App registration with [federated crendentials](https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-portal%2Cwindows#use-the-azure-login-action-with-openid-connect). This is fairly new and the benefit is we don't have to store any credentials. This is what we are going to use here.
 
-## Prerequisites
+## Step by Step
 
 1. Have a public AML workspace running in Azure
 1. have a compute cluster available called "cpu-cluster" (or change the pipeline.yml to match the name of your cluster)
